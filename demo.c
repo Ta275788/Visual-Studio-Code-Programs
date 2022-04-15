@@ -2,22 +2,23 @@
 void main()
 {
     int x;
-    int i,num;
+    int i,num=0;
     scanf("%d",&x);
-    for(i=1;i<=x;i++)
+    for(i=2;i<=x/2;i++)
     {
         if(x % i == 0)
         {
-            num++;
+            num=1;
+            break;
         }
     }
-    if(num == 2)
+    if(num == 0)
     {
         printf("%d is a prime number",x);
     }
     else
     {
-        if(num %2 == 0)
+        if(x %2 == 0)
         {
             printf("even");
         }
